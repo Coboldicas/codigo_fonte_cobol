@@ -33,47 +33,87 @@
 
        WORKING-STORAGE SECTION.
        01  WRK-IND1                PIC 9(02) VALUE ZEROS.
+       01  WRK-IND2                PIC 9(02) VALUE ZEROS.
 
        LINKAGE SECTION.
-      * Definição da estrutura do cadastro
+      * DEFINICAO DA ESTRUTURA DO ARQUIVO
        COPY COPY002A.
 
       *================================================================*
        PROCEDURE DIVISION USING COPY002A-REGISTRO.
       *================================================================*
 
-
-      *> cobol-lint CL002 0000-principal
-       0000-PRINCIPAL SECTION.
+      *----------------------------------------------------------------*
+      *    PROCESSAMENTO PRINCIPAL
+      *----------------------------------------------------------------*
+      *> cobol-lint CL002 0000-processar
+       0000-PROCESSAR                  SECTION.
+      *----------------------------------------------------------------*
             PERFORM 0001-ABRE-ARQUIVO 
             PERFORM 0002-ESCREVE-REGISTROS
             PERFORM 0003-FECHA-ARQUIVO
-            . 
-      *> cobol-lint CL002 0000-fim
-       0000-FIM. EXIT.
+            PERFORM 9999-FINALIZAR 
+            .
+      *----------------------------------------------------------------*
+      *> cobol-lint CL002 0000-end
+       0000-END.                       EXIT.
+      *----------------------------------------------------------------*
 
-       0001-ABRE-ARQUIVO SECTION.
-           OPEN OUTPUT ARQUIVO-OUT.
-      *> cobol-lint CL002 0001-fim
-       0001-FIM. EXIT.
+      *----------------------------------------------------------------*
+      *    ABRE ARQUIVO DE SAIDA
+      *----------------------------------------------------------------*
+       0001-ABRE-ARQUIVO               SECTION.
+      *----------------------------------------------------------------*
 
-       0002-ESCREVE-REGISTROS SECTION.
+           OPEN OUTPUT ARQUIVO-OUT
+           .
+      *----------------------------------------------------------------*
+      *> cobol-lint CL002 0001-end
+       0001-END.                       EXIT.
+      *----------------------------------------------------------------*
 
-           DISPLAY "GRAVAR SEQUENCIAL:"
+      *----------------------------------------------------------------*
+      *    GRAVA REGISTROS NO ARQUIVO SEQUENCIAL 
+      *----------------------------------------------------------------*
+       0002-ESCREVE-REGISTROS          SECTION.
+      *----------------------------------------------------------------*
+
            PERFORM VARYING WRK-IND1 FROM 1 BY 1 UNTIL
-                                 WRK-IND1 GREATER COPY002A-QUANT-REG 
-                   MOVE COPY002A-CADUSUAR(WRK-IND1) TO 
-                                            WRK-COPY002A-REGISTRO
-                   WRITE WRK-COPY002A-REGISTRO
-
+                           WRK-IND1 GREATER COPY002A-QUANT-REG 
+                      MOVE COPY002A-CADUSUAR(WRK-IND1)
+                                       TO WRK-COPY002A-REGISTRO
+                     WRITE WRK-COPY002A-REGISTRO
            END-PERFORM
             .
-      *> cobol-lint CL002 0002-fim
-       0002-FIM. EXIT.
+      *----------------------------------------------------------------*      
+      *> cobol-lint CL002 0002-end
+       0002-END.                       EXIT.
+      *----------------------------------------------------------------*
 
-       0003-FECHA-ARQUIVO SECTION.
-           CLOSE ARQUIVO-OUT.
-           DISPLAY "Arquivo Gravado com Sucesso!"
-           GOBACK.
-      *> cobol-lint CL002 0003-fim
-       0003-FIM. EXIT.
+      *----------------------------------------------------------------*
+      *    ABRE ARQUIVO DE SAIDA
+      *----------------------------------------------------------------*
+       0003-FECHA-ARQUIVO              SECTION.
+      *----------------------------------------------------------------*
+
+           CLOSE ARQUIVO-OUT
+           .
+      *----------------------------------------------------------------*
+      *> cobol-lint CL002 0003-end
+       0003-END.                       EXIT.
+      *----------------------------------------------------------------*
+
+      *----------------------------------------------------------------*
+      *    FINALIZAR PROGRAMA
+      *----------------------------------------------------------------*
+       9999-FINALIZAR                  SECTION.
+      *----------------------------------------------------------------*
+
+            DISPLAY "ARQUIVO GRAVADO COM SUCESSO!"
+
+            GOBACK.
+            
+      *----------------------------------------------------------------*
+      *> cobol-lint CL002 9999-end
+       9999-END.                       EXIT.
+      *----------------------------------------------------------------*

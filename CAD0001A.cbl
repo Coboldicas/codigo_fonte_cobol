@@ -10,10 +10,6 @@
        DATA DIVISION.
        WORKING-STORAGE SECTION.
 
-      * Definição do tamanho máximo de cadastros
-       01  WRK-MAX-TAB-INT         PIC 9(02) VALUE 10.
-       01  WRK-IND1                PIC 9(02) VALUE ZEROS.
-
       *  MASCARA FORMATO DA DATA - DD/MM/AAAA
        01  WRK-MASC-DATA.
          05 WRK-MASC-DATA-DIA          PIC 9(002) VALUE ZEROS.
@@ -37,8 +33,9 @@
        0000-PROCESSAR                  SECTION.
       *----------------------------------------------------------------*
             PERFORM 0001-OBTER-DATA 
-            PERFORM 0002-CAD-USUAR
             PERFORM 1002-LER-ARQSEQ
+            PERFORM 0002-CAD-USUAR
+            PERFORM 0005-CLASSIFICAR-REG
             PERFORM 0003-GRAVA-ARQSEQ
             PERFORM 0004-REL-USUAR
             PERFORM 9999-FINALIZAR
@@ -117,6 +114,19 @@
       *----------------------------------------------------------------*
       *> cobol-lint CL002 0004-end
        0004-END.                       EXIT.
+      *----------------------------------------------------------------*
+
+      *----------------------------------------------------------------*
+      *    FAZER CADASTRO USUARIO
+      *----------------------------------------------------------------*
+       0005-CLASSIFICAR-REG            SECTION.
+      *----------------------------------------------------------------*
+
+            CALL 'SORT001A' USING COPY002A-REGISTRO
+            .
+      *----------------------------------------------------------------*
+      *> cobol-lint CL002 0005-end
+       0005-END.                       EXIT.
       *----------------------------------------------------------------*
 
       *----------------------------------------------------------------*

@@ -10,7 +10,7 @@
        ENVIRONMENT DIVISION.
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
-           SELECT ARQUIVO-ENTRADA ASSIGN TO "SEQENT01.dat"
+           SELECT ARQUIVO-ENTRADA      ASSIGN TO "SEQENT01.dat"
            ORGANIZATION IS LINE SEQUENTIAL.
 
        DATA DIVISION.
@@ -30,7 +30,6 @@
           15 WRK-COPY002A-CIDADE            PIC X(30).
           15 WRK-COPY002A-ESTADO            PIC X(02).
           15 WRK-COPY002A-CEP               PIC 9(08).
-
 
        WORKING-STORAGE SECTION.
        01 FIM-ARQUIVO    PIC X VALUE "N".
@@ -87,8 +86,8 @@
             MOVE WRK-COPY002A-REGISTRO TO COPY002A-CADUSUAR(WRK-IND1)
 
             IF FIM-ARQUIVO = "N"
-               DISPLAY "ID: " COPY002A-COD(WRK-IND1)  ",
-      -                "Nome: " COPY002A-NOME(WRK-IND1)
+               DISPLAY "ID: " COPY002A-COD(WRK-IND1)
+      -                " - NOME: " COPY002A-NOME(WRK-IND1)
             END-IF
 
             PERFORM 0001-LER-ARQSEQ            

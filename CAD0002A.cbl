@@ -1,7 +1,7 @@
       ******************************************************************
       * PROGRAMADOR: JOSE ROBERTO - COBOL DICAS
       * DATA.......: 06/02/2025
-      * DESCRICAO..: MODULO DE CADASRO DE USUARIO
+      * DESCRICAO..: MODULO DE CADASTRO DE USUARIO - POR TELA
       * NOME.......: CAD0002A
       ******************************************************************
        IDENTIFICATION DIVISION.
@@ -12,8 +12,8 @@
        WORKING-STORAGE SECTION.
 
       * Definição do tamanho máximo de cadastros
-       01  WRK-MAX-TAB-INT             PIC 9(02) VALUE 10.
-       01  WRK-IND1                    PIC 9(02) VALUE 1.
+       01  WRK-MAX-TAB-INT             PIC 9(02) VALUE 50.
+       01  WRK-IND1                    PIC 9(02) VALUE ZEROS.
 
       * Variáveis auxiliares
        01  WRK-AUXILIAR.
@@ -33,6 +33,32 @@
       * Definição da estrutura do cadastro
        COPY COPY002A.
 
+       SCREEN SECTION.
+       01 TELA-CADASTRO.
+        05 BLANK SCREEN.
+        05 LINE 02 COLUMN 10 VALUE "==== CADASTRO DE USUARIO ====".
+        05 LINE 04 COLUMN 02 VALUE "Nome...........: ".
+        05 LINE 04 COLUMN 20 PIC X(30) USING WRK-NOME.
+        05 LINE 05 COLUMN 02 VALUE "Idade..........: ".
+        05 LINE 05 COLUMN 20 PIC 9(02) USING WRK-IDADE.
+        05 LINE 06 COLUMN 02 VALUE "Data nasc......: ".
+        05 LINE 06 COLUMN 20 PIC 9(08) USING WRK-DATA-NASC.
+        05 LINE 07 COLUMN 02 VALUE "Cargo..........: ".
+        05 LINE 07 COLUMN 20 PIC X(20) USING WRK-CARGO.
+        05 LINE 08 COLUMN 02 VALUE "E-mail.........: ".
+        05 LINE 08 COLUMN 20 PIC X(50) USING WRK-EMAIL.
+        05 LINE 09 COLUMN 02 VALUE "Telefone.......: ".
+        05 LINE 09 COLUMN 20 PIC 9(09) USING WRK-TELEFONE.
+        05 LINE 10 COLUMN 02 VALUE "Rua............: ".
+        05 LINE 10 COLUMN 20 PIC X(50) USING WRK-RUA.
+        05 LINE 11 COLUMN 02 VALUE "Cidade.........: ".
+        05 LINE 11 COLUMN 20 PIC X(30) USING WRK-CIDADE.
+        05 LINE 12 COLUMN 02 VALUE "Estado.........: ".
+        05 LINE 12 COLUMN 20 PIC X(02) USING WRK-ESTADO.
+        05 LINE 13 COLUMN 02 VALUE "CEP............: ".
+        05 LINE 13 COLUMN 20 PIC 9(08) USING WRK-CEP.
+        05 LINE 15 COLUMN 10 VALUE "Digite e pressione Enter".
+
       *================================================================*
        PROCEDURE DIVISION USING COPY002A-REGISTRO.
       *================================================================*
@@ -44,7 +70,12 @@
        0000-PROCESSAR                  SECTION.
       *----------------------------------------------------------------*
 
-            PERFORM 0001-OBTER-DADOS-TELA
+           IF COPY002A-QUANT-REG       LESS  50
+              PERFORM 0001-OBTER-DADOS-TELA
+           ELSE 
+              DISPLAY "QUANTIDADE DE LIDOS REGISTROS MAIOR QUE 50"
+           END-IF
+
             PERFORM 9999-FINALIZAR
             .
       *----------------------------------------------------------------*
@@ -53,56 +84,64 @@
       *----------------------------------------------------------------*
 
       *----------------------------------------------------------------*
-      *    OBTER DATA SISTEMA
+      *    OBTER DADOS DA TELA
       *----------------------------------------------------------------*
        0001-OBTER-DADOS-TELA           SECTION.
       *----------------------------------------------------------------*
 
-           DISPLAY "SIMULACAO DE CADASTRO - DIGITE 'FIM' PARA SAIR".
 
-           PERFORM UNTIL WRK-IND1 > WRK-MAX-TAB-INT
-               DISPLAY "Nome...........: " ACCEPT WRK-NOME
-
-               IF WRK-NOME EQUAL SPACES OR "FIM" 
-                  IF WRK-IND1 EQUAL 1 
-                     MOVE ZEROS TO WRK-IND1
-                  ELSE 
-                     SUBTRACT 1 FROM  WRK-IND1
+           DISPLAY "          CADASTRO DE USUARIO          "
+           DISPLAY "        PARA SAIR - DIGITE 'FIM'       "
+           MOVE COPY002A-QUANT-REG     TO WRK-IND1 
+           ADD 1                       TO WRK-IND1
+      
+      *    PERFORM UNTIL WRK-IND1 > WRK-MAX-TAB-INT
+               DISPLAY TELA-CADASTRO
+               ACCEPT TELA-CADASTRO
+      *        DISPLAY "Nome...........: " ACCEPT WRK-NOME 
+               IF WRK-NOME          EQUAL SPACES
+                                       OR "FIM" 
+                  SUBTRACT 1         FROM WRK-IND1
+                  IF WRK-IND1     GREATER ZEROS
+                     MOVE WRK-IND1     TO COPY002A-QUANT-REG
                   END-IF
                   PERFORM 9999-FINALIZAR
                END-IF
 
-               DISPLAY "Idade..........: "
-               ACCEPT WRK-IDADE
+      *        DISPLAY "Idade..........: "
+      *        ACCEPT WRK-IDADE
 
-               DISPLAY "Data nasc......: "
-               ACCEPT WRK-DATA-NASC
+      *        DISPLAY "Data nasc......: "
+      *        ACCEPT WRK-DATA-NASC
 
-               DISPLAY "Cargo..........: "
-               ACCEPT WRK-CARGO
+      *        DISPLAY "Cargo..........: "
+      *        ACCEPT WRK-CARGO
 
-               DISPLAY "E-mail.........: "
-               ACCEPT WRK-EMAIL    
+      *        DISPLAY "E-mail.........: "
+      *        ACCEPT WRK-EMAIL    
 
-               DISPLAY "Telefone.......: "               
-               ACCEPT WRK-TELEFONE 
+      *        DISPLAY "Telefone.......: "               
+      *        ACCEPT WRK-TELEFONE 
 
-               DISPLAY "Rua............: "
-               ACCEPT WRK-RUA      
+      *        DISPLAY "Rua............: "
+      *        ACCEPT WRK-RUA      
 
-               DISPLAY "Cidade.........: "
-               ACCEPT WRK-CIDADE   
+      *        DISPLAY "Cidade.........: "
+      *        ACCEPT WRK-CIDADE   
 
-               DISPLAY "Estado.........: "
-               ACCEPT WRK-ESTADO   
+      *        DISPLAY "Estado.........: "
+      *        ACCEPT WRK-ESTADO   
 
-               DISPLAY "CEP............: "
-               ACCEPT WRK-CEP      
+      *        DISPLAY "CEP............: "
+      *        ACCEPT WRK-CEP      
 
                PERFORM 0002-MOVER-DADOS
 
-               ADD 1 TO WRK-IND1
-           END-PERFORM
+               ADD 1                   TO WRK-IND1
+      *    END-PERFORM
+
+           SUBTRACT 1                FROM WRK-IND1
+           MOVE WRK-IND1               TO COPY002A-QUANT-REG
            .
       *----------------------------------------------------------------*
       *> cobol-lint CL002 0001-end
@@ -137,8 +176,6 @@
       *----------------------------------------------------------------*
        9999-FINALIZAR                  SECTION.
       *----------------------------------------------------------------*
-
-            MOVE WRK-IND1 TO COPY002A-QUANT-REG
 
             IF COPY002A-QUANT-REG  NOT EQUAL ZEROS
                DISPLAY "DADOS CADASTRADOS COM SUCESSO!"
