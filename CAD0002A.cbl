@@ -218,6 +218,7 @@
                    MOVE 'S'       TO WRK-NOME-VALIDO
            ELSE
                    MOVE 'N'       TO WRK-NOME-VALIDO
+                   DISPLAY 'NOME INVALIDO'
            END-IF
            .
       *----------------------------------------------------------------*      
