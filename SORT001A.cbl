@@ -1,7 +1,11 @@
       ******************************************************************
       * PROGRAMADOR: JOSE ROBERTO - COBOL DICAS
       * DATA.......: 07/03/2025
+<<<<<<< HEAD
       * DESCRICAO..: MODULO DE CÇASSIFICACAO DE REGISTRO
+=======
+      * DESCRICAO..: MODULO DE CLASSIFICACAO DE REGISTRO
+>>>>>>> 718268a (Primeiro commit)
       * NOME.......: SORT001A
       ******************************************************************
        IDENTIFICATION DIVISION.

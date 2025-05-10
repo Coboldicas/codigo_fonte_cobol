@@ -1,0 +1,34 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. LEARQDAT.
+
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+           SELECT ARQUIVO-ENTRADA ASSIGN TO "SEQENT01.dat"
+           ORGANIZATION IS LINE SEQUENTIAL.
+
+       DATA DIVISION.
+       FILE SECTION.
+       FD  ARQUIVO-ENTRADA.
+       01 REGISTRO.
+          05 ID          PIC 9(5).
+          05 NOME        PIC X(20).
+          05 IDADE       PIC 9(2).
+
+       WORKING-STORAGE SECTION.
+       01 FIM-ARQUIVO    PIC X VALUE "N".
+
+       PROCEDURE DIVISION.
+      *ABRE-ARQUIVO.
+           OPEN INPUT ARQUIVO-ENTRADA.
+           PERFORM LEITURA-REGISTRO UNTIL FIM-ARQUIVO = "S".
+           CLOSE ARQUIVO-ENTRADA.
+           STOP RUN.
+
+       LEITURA-REGISTRO.
+           READ ARQUIVO-ENTRADA INTO REGISTRO
+               AT END MOVE "S" TO FIM-ARQUIVO
+           END-READ.
+
+           IF FIM-ARQUIVO = "N"
+               DISPLAY "ID: " ID ", Nome: " NOME ", Idade: " IDADE.

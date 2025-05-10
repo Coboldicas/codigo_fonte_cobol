@@ -1,3 +1,4 @@
+<<<<<<< HEAD
       ******************************************************************
       * PROGRAMADOR: JOSE ROBERTO - COBOLDICAS
       * DATA: 27/01/2025
@@ -167,3 +168,146 @@
             .
        9999-END.
       *----------------------------------------------------------------*
+=======
+      ******************************************************************
+      * PROGRAMADOR: JOSE ROBERTO - COBOLDICAS
+      * DATA: 20/01/2025
+      * OBJETIVO: PRIMEIRO PROGRAMA COBOL
+      ******************************************************************
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. PROG002A.
+      *================================================================*
+       ENVIRONMENT DIVISION.
+       CONFIGURATION SECTION.
+       SPECIAL-NAMES.
+         DECIMAL-POINT IS COMMA.
+       DATA DIVISION.
+       FILE SECTION.
+       WORKING-STORAGE SECTION.
+
+       01  WRK-IND                     PIC 9(02) VALUE ZEROS.
+       01  WRK-IND1                    PIC 9(02) VALUE ZEROS.
+       01  WRK-IND2                    PIC 9(02) VALUE ZEROS.
+
+       01  WRK-VALOR1                  PIC 9(07)V999 VALUE ZEROS.
+       01  WRK-VALOR2                  PIC 9(07)V999 VALUE ZEROS.
+       01  WRK-TOTAL                   PIC 9(07)V999 VALUE ZEROS.
+       01  WRK-TOTAL2                  PIC 9(07)V99 VALUE ZEROS.
+
+
+       01  WRK-VALOR1-S9               PIC S9(07)V999 VALUE ZEROS.
+       01  WRK-VALOR2-S9               PIC S9(07)V999 VALUE ZEROS.
+       01  WRK-TOTAL1-S9               PIC S9(07)V99 VALUE ZEROS.
+       01  WRK-TOTAL2-S9               PIC S9(07)V99 VALUE ZEROS.
+
+       01 WRK-VALOR-CORR1.
+         05 WRK-VALOR-CORR-1          PIC 9(02) VALUE ZEROS. 
+         05 WRK-VALOR-CORR-2          PIC 9(02) VALUE ZEROS. 
+         05 WRK-VALOR-CORR-X          PIC X(02) VALUE SPACES. 
+
+       01 WRK-VALOR-CORR2.
+         05 WRK-VALOR-CORR-1          PIC 9(02) VALUE ZEROS. 
+         05 FILLER                    PIC X(01). 
+         05 WRK-VALOR-CORR-2          PIC 9(02) VALUE ZEROS. 
+         05 FILLER                    PIC X(01). 
+         05 WRK-VALOR-CORR-X          PIC X(02) VALUE SPACES. 
+
+       01  WRK-DATA.
+         03 WRK-DD                     PIC 9(02).
+         03 FILLER                     PIC X(01). 
+         03 WRK-MM                     PIC 9(02).
+         03 FILLER                     PIC X(01). 
+         03 WRK-AA                     PIC 9(04).
+
+       01  WRK-DATA-INV.
+         03 WRK-AA                     PIC 9(04).
+         03 WRK-MM                     PIC 9(02).
+         03 WRK-DD                     PIC 9(02).
+
+       01  WRK-YEAR    PICTURE 99 VALUE IS 50.
+       01  WRK-SOBRA   PIC X(20). 
+
+       PROCEDURE DIVISION.
+      *     DISPLAY "EXEMPLO DE CONTINUACAO LINHA SEGUINTE *************
+      *-    "*************"
+
+            MOVE 1,233 TO WRK-VALOR1
+            MOVE 2,789 TO WRK-VALOR2
+
+            COMPUTE WRK-TOTAL = WRK-VALOR1 + WRK-VALOR2
+            COMPUTE WRK-TOTAL2 = WRK-TOTAL * 1
+      *     COMPUTE WRK-TOTAL2 ROUNDED = WRK-TOTAL * 1
+
+            DISPLAY 'WRK-VALOR1: ' WRK-VALOR1.
+            DISPLAY 'WRK-VALOR2: ' WRK-VALOR2.
+            DISPLAY 'WRK-TOTAL : ' WRK-TOTAL.
+            DISPLAY 'WRK-TOTAL2: ' WRK-TOTAL2.
+
+            MOVE 2    TO  WRK-VALOR-CORR-1 OF WRK-VALOR-CORR1
+            MOVE 1    TO  WRK-VALOR-CORR-2 OF WRK-VALOR-CORR1
+            MOVE 'AB' TO  WRK-VALOR-CORR-X OF WRK-VALOR-CORR1
+
+            DISPLAY 'CORR-1: '  WRK-VALOR-CORR-1  OF WRK-VALOR-CORR1
+            DISPLAY 'CORR-2: '  WRK-VALOR-CORR-2  OF WRK-VALOR-CORR1
+            DISPLAY 'CORR-X: '  WRK-VALOR-CORR-X  OF WRK-VALOR-CORR1
+
+            DISPLAY 'WRK-VALOR-CORR1: ' WRK-VALOR-CORR1
+
+            MOVE 4    TO  WRK-VALOR-CORR-1  OF WRK-VALOR-CORR2
+            MOVE 3    TO  WRK-VALOR-CORR-2  OF WRK-VALOR-CORR2
+            MOVE 'CD' TO  WRK-VALOR-CORR-X  OF WRK-VALOR-CORR2
+
+            DISPLAY 'CORR2-1: '  WRK-VALOR-CORR-1  OF WRK-VALOR-CORR2
+            DISPLAY 'CORR2-2: '  WRK-VALOR-CORR-2  OF WRK-VALOR-CORR2
+            DISPLAY 'CORR2-X: '  WRK-VALOR-CORR-X  OF WRK-VALOR-CORR2
+
+            DISPLAY 'WRK-VALOR-CORR2: ' WRK-VALOR-CORR2
+
+            ADD CORR WRK-VALOR-CORR1 TO WRK-VALOR-CORR2 
+      *     MOVE CORR WRK-VALOR-CORR1 TO WRK-VALOR-CORR2 
+
+            DISPLAY 'WRK-VALOR-CORR1: ' WRK-VALOR-CORR1
+            DISPLAY 'WRK-VALOR-CORR2: ' WRK-VALOR-CORR2
+
+            MOVE '20/01/2025' TO WRK-DATA   
+            MOVE CORR WRK-DATA TO WRK-DATA-INV
+            
+            DISPLAY 'DATA: ' WRK-DATA 
+            DISPLAY 'DATA INV: ' WRK-DATA-INV
+
+             DISPLAY 'WRK-YEAR ANTES: ' WRK-YEAR
+             SUBTRACT 10 FROM WRK-YEAR 
+      *      SUBTRACT -100 FROM WRK-YEAR 
+             ON SIZE ERROR DISPLAY 'ERRO'.
+             
+             DISPLAY 'WRK-YEAR DEPOIS: ' WRK-YEAR
+             
+             ADD 1 TO WRK-IND
+             DISPLAY 'WRK IND ANTES: '  WRK-IND
+
+             ADD 42 TO WRK-IND ON SIZE ERROR
+             DISPLAY 'CAMPO WRK-IND COM ERRO DE TAMANHO'
+             NOT SIZE ERROR    
+             DISPLAY 'WRK IND DEPOIS: '  WRK-IND
+
+      *      DIVIDE 2 INTO WRK-IND
+      *      DISPLAY 'RESULTADO DA DIVISAO 1: ' WRK-IND
+
+             DIVIDE WRK-IND BY 2 GIVING WRK-IND1 REMAINDER WRK-IND2 
+             DISPLAY 'RESULTADO DA DIVISAO 2: ' WRK-IND1
+             DISPLAY 'RESULTADO DO REST: ' WRK-IND2
+
+             SUBTRACT 1 FROM WRK-IND1
+             DISPLAY 'RESULTADO DA SUBTRACAO: ' WRK-IND1
+
+             IF ((WRK-IND1 EQUAL 10 OR 15 OR 20) AND
+                 (WRK-IND2 EQUAL 01))
+                  DISPLAY 'FUNCIONA'
+             ELSE 
+                DISPLAY 'NAO FUNCIONA'
+             END-IF 
+
+
+             . 
+            STOP RUN.
+>>>>>>> 718268a (Primeiro commit)
