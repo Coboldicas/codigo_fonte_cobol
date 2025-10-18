@@ -1,5 +1,3 @@
-![COBOL Dicas Banner](https://github.com/CobolDicas/codigo_fonte_cobol/assets/banner_coboldicas.png)
-
 # 🦖 COBOL Dicas
 
 **Repositório oficial de exemplos e programas do projeto [COBOL Dicas](https://coboldicas.com.br)**  
