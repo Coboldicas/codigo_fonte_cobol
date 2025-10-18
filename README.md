@@ -61,11 +61,11 @@ Tecnologia        - Descrição
 ---
 
 🔗 Links Oficiais:
-- 🌐 Site COBOL Dicas
-- 💬 Fórum COBOL Dicas
-- 🎥 Canal no YouTube
-- 🎙️ Podcast COBOL Dicas
-- 💼 LinkedIn
+- 🌐 Site COBOL Dicas – https://coboldicas.com.br
+- 💬 Fórum COBOL Dicas – https://forum.coboldicas.com.br
+- 🎥 Canal no YouTube – https://youtube.com/@coboldicas
+- 🎙️ Podcast COBOL Dicas – https://www.youtube.com/playlist?list=PLO7GuUJuM4BXHDh2SvdyUzvXg7xpyea2f
+- 💼 LinkedIn – https://www.linkedin.com/company/coboldicas
 
 ---
 
