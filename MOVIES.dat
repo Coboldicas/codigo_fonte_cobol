@@ -1,9 +1,0 @@
-| Início | Término | Tamanho | Decimais | Tipo        | Label    | Descrição                                |
-|:------:|:-------:|:-------:|:--------:|-------------|----------|------------------------------------------|
-| 001    | 005     | 005     | 00       | Numérico    | CODFILME | Código de identificação única do filme   |
-| 006    | 035     | 030     | 00       | Alfanumérico| TITULO   | Título do filme                          |
-| 036    | 043     | 002     | 00       | Alfanumérico| GENERO   | Gênero de classificação do filme         |
-| 044    | 046     | 003     | 00       | Numérico    | DURACAO  | Duração (contado em minutos)             |
-| 047    | 061     | 015     | 00       | Alfanumérico| DISTRIB  | Nome da distribuidora                    |
-| 062    | 063     | 002     | 00       | Numérico    | NOTA     | Nota atribuída ao filme                  |
-| 064    | 100     | 037     | -        | Alfanumérico| FILLER   | Sem uso                                  |
