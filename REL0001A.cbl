@@ -1,10 +1,16 @@
+      ******************************************************************
+      * PROGRAMADOR: JOSE ROBERTO - COBOL DICAS
+      * DATA.......: 06/02/2025
+      * DESCRICAO..: MODULO DE GERACAO DE RELATORIO
+      * NOME.......: CAD0002A
+      ******************************************************************
        IDENTIFICATION DIVISION.
        PROGRAM-ID. REL0001A.
 
        ENVIRONMENT DIVISION.
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
-           SELECT REL0001A-OUT ASSIGN TO "REL0001A.txt"
+           SELECT REL0001A-OUT ASSIGN TO 'REL0001A.txt'
            ORGANIZATION IS LINE SEQUENTIAL.
 
        DATA DIVISION.
@@ -38,59 +44,59 @@
 
        01  WRK-REL0001A-LINHA.
         03 FILLER                      PIC X(80) VALUE 
-            "**---------------------------------------------------------
-      -     "-------------------**".
+            '**---------------------------------------------------------
+      -     '-------------------**'.
        01  WRK-REL0001A-LINHA-BRANCO   PIC X(80) VALUE SPACES.
 
        01  WRK-REL0001A-CAB1.
         03 FILLER                      PIC X(67) VALUE
-            "** REL0001A                    COBOL DICAS                 
-      -     "        ".
+            '** REL0001A                    COBOL DICAS                 
+      -     '        '.
         03 WRK-REL0001A-CAB1-DATA      PIC X(10) VALUE SPACES.
-        03 FILLER                      PIC X(03) VALUE " **". 
+        03 FILLER                      PIC X(03) VALUE ' **'. 
 
        01  WRK-REL0001A-CAB2.
         03 FILLER                      PIC X(08) VALUE
-            "** PAG: ".
+            '** PAG: '.
         03 WRK-REL0001A-PAG            PIC 9(02) VALUE ZEROS.
         03 FILLER                      PIC X(62) VALUE
-            "                RELATORIO CADASTRO USUARIO                 
-      -     "   ".
+            '                RELATORIO CADASTRO USUARIO                 
+      -     '   '.
         03 WRK-REL0001A-HORA           PIC X(05) VALUE SPACES.
-        03 FILLER                      PIC X(03) VALUE " **".
+        03 FILLER                      PIC X(03) VALUE ' **'.
 
        01  WRK-REL0001A-DET1.
-        03 FILLER                      PIC X(06) VALUE "NOME: ".
+        03 FILLER                      PIC X(06) VALUE 'NOME: '.
         03 WRK-REL0001A-NOME           PIC X(30) VALUE SPACES.
-        03 FILLER                      PIC X(11) VALUE " - CODIGO: ".
+        03 FILLER                      PIC X(11) VALUE ' - CODIGO: '.
         03 WRK-REL0001A-COD            PIC 9(02) VALUE ZEROS.
 
        01  WRK-REL0001A-DET2.
-        03 FILLER                      PIC X(08) VALUE "IDADE: ".
+        03 FILLER                      PIC X(08) VALUE 'IDADE: '.
         03 WRK-REL0001A-IDADE          PIC 9(02) VALUE ZEROS.
         03 FILLER                      PIC X(15) VALUE 
-            " - DATA NASC.: ".
+            ' - DATA NASC.: '.
         03 WRK-REL0001A-DATA-NASC      PIC X(10) VALUE SPACES.
-        03 FILLER                      PIC X(13) VALUE " - TELEFONE: ".
+        03 FILLER                      PIC X(13) VALUE ' - TELEFONE: '.
         03 WRK-REL0001A-TELEFONE       PIC 9(09) VALUE ZEROS.
 
        01  WRK-REL0001A-DET3.
-        03 FILLER                      PIC X(07) VALUE "CARGO: ".
+        03 FILLER                      PIC X(07) VALUE 'CARGO: '.
         03 WRK-REL0001A-CARGO          PIC X(20) VALUE SPACES.
-        03 FILLER                      PIC X(11) VALUE " - E-MAIL: ".
+        03 FILLER                      PIC X(11) VALUE ' - E-MAIL: '.
         03 WRK-REL0001A-EMAIL          PIC X(30) VALUE SPACES.
 
 
        01  WRK-REL0001A-DET4.
-        03 FILLER                      PIC X(10) VALUE "ENDERECO: ".
+        03 FILLER                      PIC X(10) VALUE 'ENDERECO: '.
         03 WRK-REL0001A-RUA            PIC X(50) VALUE SPACES.
 
        01  WRK-REL0001A-DET5.
-        03 FILLER                      PIC X(14) VALUE "CIDADE: ".
+        03 FILLER                      PIC X(14) VALUE 'CIDADE: '.
         03 WRK-REL0001A-CIDADE         PIC X(30) VALUE SPACES.
-        03 FILLER                      PIC X(11) VALUE " - ESTADO: ".
+        03 FILLER                      PIC X(11) VALUE ' - ESTADO: '.
         03 WRK-REL0001A-ESTADO         PIC X(02) VALUE SPACES.
-        03 FILLER                      PIC X(08) VALUE " - CEP: ".
+        03 FILLER                      PIC X(08) VALUE ' - CEP: '.
         03 WRK-REL0001A-CEP            PIC 9(08) VALUE ZEROS.
 
       *    DEFINICAO DE DATA E HORA DO SISTEMA. 
@@ -296,7 +302,7 @@
        9999-FINALIZAR                  SECTION.
       *----------------------------------------------------------------*
 
-            DISPLAY "RELATORIO GERADO COM SUCESSO!"
+            DISPLAY 'RELATORIO GERADO COM SUCESSO!'
             GOBACK 
             .
       *----------------------------------------------------------------*

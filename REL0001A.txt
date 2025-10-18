@@ -1,6 +1,6 @@
 **----------------------------------------------------------------------------**
-** REL0001A                    COBOL DICAS                         08/05/2025 **
-** PAG: 01                RELATORIO CADASTRO USUARIO                    21:23 **
+** REL0001A                    COBOL DICAS                         14/06/2025 **
+** PAG: 01                RELATORIO CADASTRO USUARIO                    22:14 **
 **----------------------------------------------------------------------------**
 NOME: FELIPE CUNHA                   - CODIGO: 01
 IDADE:  40 - DATA NASC.: 20/00/0128 - TELEFONE: 000000000
@@ -16,8 +16,8 @@ CIDADE:       NOGUEIRA PAULISTA              - ESTADO: RR - CEP: 97182900
 **----------------------------------------------------------------------------**
 
 **----------------------------------------------------------------------------**
-** REL0001A                    COBOL DICAS                         08/05/2025 **
-** PAG: 02                RELATORIO CADASTRO USUARIO                    21:23 **
+** REL0001A                    COBOL DICAS                         14/06/2025 **
+** PAG: 02                RELATORIO CADASTRO USUARIO                    22:14 **
 **----------------------------------------------------------------------------**
 NOME: DRA. MARIA LUIZA DA PAZ        - CODIGO: 03
 IDADE:  27 - DATA NASC.: 19/86/1215 - TELEFONE: 164015206
@@ -33,8 +33,8 @@ CIDADE:       OLIVEIRA                       - ESTADO: PA - CEP: 02295655
 **----------------------------------------------------------------------------**
 
 **----------------------------------------------------------------------------**
-** REL0001A                    COBOL DICAS                         08/05/2025 **
-** PAG: 03                RELATORIO CADASTRO USUARIO                    21:23 **
+** REL0001A                    COBOL DICAS                         14/06/2025 **
+** PAG: 03                RELATORIO CADASTRO USUARIO                    22:14 **
 **----------------------------------------------------------------------------**
 NOME: GUILHERME GOMES                - CODIGO: 05
 IDADE:  29 - DATA NASC.: 19/76/0307 - TELEFONE: 584130174
@@ -50,8 +50,8 @@ CIDADE:       MORAES                         - ESTADO: PE - CEP: 75155000
 **----------------------------------------------------------------------------**
 
 **----------------------------------------------------------------------------**
-** REL0001A                    COBOL DICAS                         08/05/2025 **
-** PAG: 04                RELATORIO CADASTRO USUARIO                    21:23 **
+** REL0001A                    COBOL DICAS                         14/06/2025 **
+** PAG: 04                RELATORIO CADASTRO USUARIO                    22:14 **
 **----------------------------------------------------------------------------**
 NOME: GUILHERME DA COSTA             - CODIGO: 07
 IDADE:  56 - DATA NASC.: 20/05/0823 - TELEFONE: 142555379
@@ -67,8 +67,8 @@ CIDADE:       CUNHA DE MINAS                 - ESTADO: PR - CEP: 70765619
 **----------------------------------------------------------------------------**
 
 **----------------------------------------------------------------------------**
-** REL0001A                    COBOL DICAS                         08/05/2025 **
-** PAG: 05                RELATORIO CADASTRO USUARIO                    21:23 **
+** REL0001A                    COBOL DICAS                         14/06/2025 **
+** PAG: 05                RELATORIO CADASTRO USUARIO                    22:14 **
 **----------------------------------------------------------------------------**
 NOME: ALEXANDRE NOVAES               - CODIGO: 09
 IDADE:  59 - DATA NASC.: 19/76/0813 - TELEFONE: 604509400
@@ -81,15 +81,4 @@ IDADE:  27 - DATA NASC.: 19/63/1004 - TELEFONE: 633834238
 CARGO: AGRICULTOR           - E-MAIL: PEDRO80@ARAGAO.BR
 ENDERECO: FAZENDA FOGACA
 CIDADE:       RIBEIRO DAS PEDRAS             - ESTADO: AM - CEP: 78711411
-**----------------------------------------------------------------------------**
-
-**----------------------------------------------------------------------------**
-** REL0001A                    COBOL DICAS                         08/05/2025 **
-** PAG: 06                RELATORIO CADASTRO USUARIO                    21:23 **
-**----------------------------------------------------------------------------**
-NOME: JOSE                           - CODIGO: 11
-IDADE:  32 - DATA NASC.: 01/05/2025 - TELEFONE: 745114099
-CARGO: ANALISTA             - E-MAIL: JOSE@GMAIL.COM
-ENDERECO:
-CIDADE:                                      - ESTADO:    - CEP: 00000000
 **----------------------------------------------------------------------------**

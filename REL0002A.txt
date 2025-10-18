@@ -1,0 +1,33 @@
+**----------------------------------------------------------------------------**
+** REL0002A                    COBOL DICAS                         16/06/2025 **
+** PAG: 01                RELATORIO CADASTRO CLIENTE                    17:31 **
+**----------------------------------------------------------------------------**
+NOME                              IDADE       SALARIO
+JOAO DA SILVA                        35       4.500,05
+MARIA OLIVEIRA                       29       6.200,00
+ANTONIO PEREIRA                      41       3.850,07
+CARLA MENEZES                        33       7.120,00
+ROBERTO LIMA                         28       5.600,08
+LUCIANA CASTRO                       45       8.300,00
+PAULO HENRIQUE                       31       4.000,00
+FERNANDA SOUSA                       26       3.750,09
+RICARDO ALMEIDA                      39       5.990,09
+ANA BEATRIZ                          30       4.720,01
+
+**----------------------------------------------------------------------------**
+** REL0002A                    COBOL DICAS                         16/06/2025 **
+** PAG: 02                RELATORIO CADASTRO CLIENTE                    17:31 **
+**----------------------------------------------------------------------------**
+NOME                              IDADE       SALARIO
+DIEGO MOURA                          36       5.200,00
+PRISCILA FREITAS                     27       4.850,06
+RAFAEL GOMES                         42       6.300,00
+VIVIANE RAMOS                        34       5.555,05
+MARCOS ANDRADE                       38       6.100,00
+KAREN NASCIMENTO                     25       3.600,00
+LEONARDO DIAS                        37       5.000,00
+JULIANA SOARES                       40       7.250,07
+EDUARDO TEIXEIRA                     43       5.800,00
+MONICA FARIAS                        32       4.600,00
+
+  QTDE. REG.: 20       TOTAL SALARIO: R$    108.281,57

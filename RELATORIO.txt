@@ -2,6 +2,11 @@
 * REL0001A                    COBOL DICAS                          20/02/2025 *
 * PAG: 001             RELATORIO CADSTRO USUARIO                        20:24 *
 **---------------------------------------------------------------------------**
+NOME                     IDADE      SALARIO
+
+
+
+
 NOME: WRK-REL0001A-NOME   - CODIGO: WRK-REL0001A-COD 
 IDADE: WRK-REL0001A-IDADE - DATA NASC: WRK-REL0001A-DATA-NASC
 CARGO: WRK-REL0001A-CARGO - EMAIL: WRK-REL0001A-EMAIL - TELEFONE: WRK-REL0001A-TELEFONE

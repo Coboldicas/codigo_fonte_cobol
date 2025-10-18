@@ -9,6 +9,7 @@
        01 WS-KEY   PIC 9(2).
 
        PROCEDURE DIVISION.
+      *> cobol-lint CL002 main-process
        MAIN-PROCESS.
 
            *> Inicia ncurses
