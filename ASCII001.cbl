@@ -1,0 +1,13 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. ASCII001.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01  WS-CHAR     PIC X VALUE " ".
+
+
+       PROCEDURE DIVISION.
+           COMPUTE WS-CODIGO = FUNCTION ORD(WS-CHAR)
+           DISPLAY "Caractere: " WS-CHAR
+           DISPLAY "Código ASCII decimal: " WS-CODIGO
+           STOP RUN.

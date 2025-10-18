@@ -1,84 +1,84 @@
 **----------------------------------------------------------------------------**
-** REL0001A                    COBOL DICAS                         14/06/2025 **
-** PAG: 01                RELATORIO CADASTRO USUARIO                    22:14 **
+** REL0001A                    COBOL DICAS                         09/08/2025 **
+** PAG: 01                RELATORIO CADASTRO USUARIO                    01:16 **
 **----------------------------------------------------------------------------**
-NOME: FELIPE CUNHA                   - CODIGO: 01
-IDADE:  40 - DATA NASC.: 20/00/0128 - TELEFONE: 000000000
-CARGO: ATUARIO              - E-MAIL: GNUNES@HOTMAIL.COM
-ENDERECO: AEROPORTO DE DA MOTA
-CIDADE:       NOVAES                         - ESTADO: RS - CEP: 24502715
-**----------------------------------------------------------------------------**
-NOME: JULIANA DA ROCHA               - CODIGO: 02
-IDADE:  55 - DATA NASC.: 19/59/0518 - TELEFONE: 265498091
-CARGO: PREFEITO             - E-MAIL: YPINTO@NUNES.BR
-ENDERECO: COLONIA DE CUNHA
-CIDADE:       NOGUEIRA PAULISTA              - ESTADO: RR - CEP: 97182900
-**----------------------------------------------------------------------------**
-
-**----------------------------------------------------------------------------**
-** REL0001A                    COBOL DICAS                         14/06/2025 **
-** PAG: 02                RELATORIO CADASTRO USUARIO                    22:14 **
-**----------------------------------------------------------------------------**
-NOME: DRA. MARIA LUIZA DA PAZ        - CODIGO: 03
-IDADE:  27 - DATA NASC.: 19/86/1215 - TELEFONE: 164015206
-CARGO: TECNOLOGO EM PROCESS - E-MAIL: RYANDIAS@DAS.COM
-ENDERECO: CHACARA VALENTINA DA CONCEICAO
-CIDADE:       SALES DE RIBEIRO               - ESTADO: ES - CEP: 31960767
-**----------------------------------------------------------------------------**
-NOME: JOAO FELIPE SANTOS             - CODIGO: 04
-IDADE:  53 - DATA NASC.: 19/92/0807 - TELEFONE: 758774792
-CARGO: MECANICO DE VOO      - E-MAIL: BERNARDODA-ROSA@BOL.COM.BR
-ENDERECO: MORRO CASTRO
-CIDADE:       OLIVEIRA                       - ESTADO: PA - CEP: 02295655
-**----------------------------------------------------------------------------**
-
-**----------------------------------------------------------------------------**
-** REL0001A                    COBOL DICAS                         14/06/2025 **
-** PAG: 03                RELATORIO CADASTRO USUARIO                    22:14 **
-**----------------------------------------------------------------------------**
-NOME: GUILHERME GOMES                - CODIGO: 05
-IDADE:  29 - DATA NASC.: 19/76/0307 - TELEFONE: 584130174
-CARGO: ENGENHEIRO MECANICO  - E-MAIL: MATHEUSNUNES@REZENDE.ORG
-ENDERECO: PARQUE DE DIAS
-CIDADE:       DA ROCHA DE GOIAS              - ESTADO: BA - CEP: 55483947
+NOME: ALEXANDRE NOVAES               - CODIGO: 09
+IDADE:  59 - DATA NASC.: 19/76/0813 - TELEFONE: 000000000
+CARGO: TERAPEUTA HOLISTICO  - E-MAIL: HENRIQUE85@GMAIL.COM
+ENDERECO: RUA DE GONCALVES
+CIDADE:       DA CONCEICAO                   - ESTADO: RR - CEP: 06899509
 **----------------------------------------------------------------------------**
 NOME: DR. KAIQUE SOUZA               - CODIGO: 06
-IDADE:  41 - DATA NASC.: 19/72/0302 - TELEFONE: 194432699
+IDADE:  41 - DATA NASC.: 19/72/0302 - TELEFONE: 633834238
 CARGO: COMERCIANTE          - E-MAIL: ANA-JULIA09@DA.NET
 ENDERECO: FAZENDA RIBEIRO
 CIDADE:       MORAES                         - ESTADO: PE - CEP: 75155000
 **----------------------------------------------------------------------------**
 
 **----------------------------------------------------------------------------**
-** REL0001A                    COBOL DICAS                         14/06/2025 **
-** PAG: 04                RELATORIO CADASTRO USUARIO                    22:14 **
+** REL0001A                    COBOL DICAS                         09/08/2025 **
+** PAG: 02                RELATORIO CADASTRO USUARIO                    01:16 **
+**----------------------------------------------------------------------------**
+NOME: DRA. MARIA LUIZA DA PAZ        - CODIGO: 03
+IDADE:  27 - DATA NASC.: 19/86/1215 - TELEFONE: 142555379
+CARGO: TECNOLOGO EM PROCESS - E-MAIL: RYANDIAS@DAS.COM
+ENDERECO: CHACARA VALENTINA DA CONCEICAO
+CIDADE:       SALES DE RIBEIRO               - ESTADO: ES - CEP: 31960767
+**----------------------------------------------------------------------------**
+NOME: FELIPE CUNHA                   - CODIGO: 01
+IDADE:  40 - DATA NASC.: 20/00/0128 - TELEFONE: 758774792
+CARGO: ATUARIO              - E-MAIL: GNUNES@HOTMAIL.COM
+ENDERECO: AEROPORTO DE DA MOTA
+CIDADE:       NOVAES                         - ESTADO: RS - CEP: 24502715
+**----------------------------------------------------------------------------**
+
+**----------------------------------------------------------------------------**
+** REL0001A                    COBOL DICAS                         09/08/2025 **
+** PAG: 03                RELATORIO CADASTRO USUARIO                    01:16 **
 **----------------------------------------------------------------------------**
 NOME: GUILHERME DA COSTA             - CODIGO: 07
-IDADE:  56 - DATA NASC.: 20/05/0823 - TELEFONE: 142555379
+IDADE:  56 - DATA NASC.: 20/05/0823 - TELEFONE: 265498091
 CARGO: CONSULTOR DE RADIEST - E-MAIL: IGORPORTO@IG.COM.BR
 ENDERECO: VIELA DE COSTELA
 CIDADE:       CARDOSO                        - ESTADO: RO - CEP: 93165721
 **----------------------------------------------------------------------------**
-NOME: PIETRA NUNES                   - CODIGO: 08
-IDADE:  25 - DATA NASC.: 19/82/0722 - TELEFONE: 225486925
-CARGO: AVIADOR              - E-MAIL: QLIMA@BOL.COM.BR
-ENDERECO: VIELA DE OLIVEIRA
-CIDADE:       CUNHA DE MINAS                 - ESTADO: PR - CEP: 70765619
+NOME: GUILHERME GOMES                - CODIGO: 05
+IDADE:  29 - DATA NASC.: 19/76/0307 - TELEFONE: 225486925
+CARGO: ENGENHEIRO MECANICO  - E-MAIL: MATHEUSNUNES@REZENDE.ORG
+ENDERECO: PARQUE DE DIAS
+CIDADE:       DA ROCHA DE GOIAS              - ESTADO: BA - CEP: 55483947
 **----------------------------------------------------------------------------**
 
 **----------------------------------------------------------------------------**
-** REL0001A                    COBOL DICAS                         14/06/2025 **
-** PAG: 05                RELATORIO CADASTRO USUARIO                    22:14 **
+** REL0001A                    COBOL DICAS                         09/08/2025 **
+** PAG: 04                RELATORIO CADASTRO USUARIO                    01:16 **
 **----------------------------------------------------------------------------**
-NOME: ALEXANDRE NOVAES               - CODIGO: 09
-IDADE:  59 - DATA NASC.: 19/76/0813 - TELEFONE: 604509400
-CARGO: TERAPEUTA HOLISTICO  - E-MAIL: HENRIQUE85@GMAIL.COM
-ENDERECO: RUA DE GONCALVES
-CIDADE:       DA CONCEICAO                   - ESTADO: RR - CEP: 06899509
+NOME: JOAO FELIPE SANTOS             - CODIGO: 04
+IDADE:  53 - DATA NASC.: 19/92/0807 - TELEFONE: 194432699
+CARGO: MECANICO DE VOO      - E-MAIL: BERNARDODA-ROSA@BOL.COM.BR
+ENDERECO: MORRO CASTRO
+CIDADE:       OLIVEIRA                       - ESTADO: PA - CEP: 02295655
+**----------------------------------------------------------------------------**
+NOME: JULIANA DA ROCHA               - CODIGO: 02
+IDADE:  55 - DATA NASC.: 19/59/0518 - TELEFONE: 584130174
+CARGO: PREFEITO             - E-MAIL: YPINTO@NUNES.BR
+ENDERECO: COLONIA DE CUNHA
+CIDADE:       NOGUEIRA PAULISTA              - ESTADO: RR - CEP: 97182900
+**----------------------------------------------------------------------------**
+
+**----------------------------------------------------------------------------**
+** REL0001A                    COBOL DICAS                         09/08/2025 **
+** PAG: 05                RELATORIO CADASTRO USUARIO                    01:16 **
 **----------------------------------------------------------------------------**
 NOME: PAULO SOUZA                    - CODIGO: 10
-IDADE:  27 - DATA NASC.: 19/63/1004 - TELEFONE: 633834238
+IDADE:  27 - DATA NASC.: 19/63/1004 - TELEFONE: 164015206
 CARGO: AGRICULTOR           - E-MAIL: PEDRO80@ARAGAO.BR
 ENDERECO: FAZENDA FOGACA
 CIDADE:       RIBEIRO DAS PEDRAS             - ESTADO: AM - CEP: 78711411
+**----------------------------------------------------------------------------**
+NOME: PIETRA NUNES                   - CODIGO: 08
+IDADE:  25 - DATA NASC.: 19/82/0722 - TELEFONE: 745114099
+CARGO: AVIADOR              - E-MAIL: QLIMA@BOL.COM.BR
+ENDERECO: VIELA DE OLIVEIRA
+CIDADE:       CUNHA DE MINAS                 - ESTADO: PR - CEP: 70765619
 **----------------------------------------------------------------------------**

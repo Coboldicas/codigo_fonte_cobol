@@ -94,7 +94,11 @@
                WHEN 2 PERFORM 0007-LISTAR-AGENDA 
                WHEN 0 CONTINUE
                WHEN OTHER
+<<<<<<< HEAD
                     DISPLAY 'OPÇÃO INVÁLIDA!'
+=======
+                    DISPLAY 'OPÇÃO INVÁLIDA!' 
+>>>>>>> cb85f5b (Adiciona estrutura do projeto COBOL Dicas)
            END-EVALUATE
            .
       *----------------------------------------------------------------*

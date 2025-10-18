@@ -160,7 +160,11 @@
            END-PERFORM 
 
            IF WRK-QTDE-REG >= 50
+<<<<<<< HEAD
               DISPLAY 'AGENDA CHEIA! - MAXIMO 50 REGISTROS'
+=======
+              DISPLAY 'TABELA CHEIA! - MAXIMO 50 REGISTROS'
+>>>>>>> cb85f5b (Adiciona estrutura do projeto COBOL Dicas)
               DISPLAY ' FOI ATINGIDO A QUANTIDADE MAXIMA DE REGISTROS'
               CLOSE ARQUIVO-ENT
               PERFORM 9999-FINALIZAR

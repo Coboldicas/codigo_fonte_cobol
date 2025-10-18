@@ -1,4 +1,4 @@
-      ******************************************************************
+******************************************************************
       * PROGRAMADOR: JOSE ROBERTO - COBOLDICAS
       * DATA: 06/02/2025
       * OBJETIVO: PROGRAMA DE CADASTRO DE USUARIO
@@ -17,6 +17,9 @@
          05 WRK-MASC-DATA-MES          PIC 9(002) VALUE ZEROS.
          05 FILLER                     PIC X(001) VALUE '/'.
          05 WRK-MASC-DATA-ANO          PIC 9(004) VALUE ZEROS.
+
+      *  Variável para armazenar o código de retorno das chamadas
+       01  WRK-RETURN-CODE             PIC S9(4) COMP VALUE ZERO.
 
       *     DEFINICAO DE DATA E HORA DO SISTEMA. 
             COPY COD001A.
@@ -51,7 +54,15 @@
        0001-OBTER-DATA                  SECTION.
       *----------------------------------------------------------------*
 
-            CALL 'PROGDATA' USING COD001A-REGISTRO. 
+            CALL 'PROGDATA' USING COD001A-REGISTRO
+
+            MOVE RETURN-CODE TO WRK-RETURN-CODE
+
+            IF WRK-RETURN-CODE NOT = 0
+               DISPLAY 'ERRO NA CHAMADA PROGDATA. RETURN-CODE: '
+                WRK-RETURN-CODE
+               STOP RUN
+            END-IF
 
             MOVE COD001A-DATA-ANO      TO WRK-MASC-DATA-ANO
             MOVE COD001A-DATA-MES      TO WRK-MASC-DATA-MES
@@ -67,8 +78,13 @@
       *----------------------------------------------------------------*
        0002-CAD-USUAR                  SECTION.
       *----------------------------------------------------------------*
- 
             CALL 'CAD0002A' USING COPY002A-REGISTRO
+            MOVE RETURN-CODE TO WRK-RETURN-CODE
+            IF WRK-RETURN-CODE NOT = 0
+               DISPLAY 'ERRO NA CHAMADA CAD0002A. RETURN-CODE: ' 
+               WRK-RETURN-CODE
+               STOP RUN
+            END-IF
             .
       *----------------------------------------------------------------*
       *> cobol-lint CL002 0002-end
@@ -80,8 +96,13 @@
       *----------------------------------------------------------------*
        1002-LER-ARQSEQ                 SECTION.
       *----------------------------------------------------------------*
- 
             CALL 'LER0001A' USING COPY002A-REGISTRO
+            MOVE RETURN-CODE TO WRK-RETURN-CODE
+            IF WRK-RETURN-CODE NOT = 0
+               DISPLAY 'ERRO NA CHAMADA LER0001A. RETURN-CODE: '
+                WRK-RETURN-CODE
+               STOP RUN
+            END-IF
             .
       *----------------------------------------------------------------*
       *> cobol-lint CL002 1002-end
@@ -93,8 +114,13 @@
       *----------------------------------------------------------------*
        0003-GRAVA-ARQSEQ               SECTION.
       *----------------------------------------------------------------*
-
             CALL 'GRAV001A' USING COPY002A-REGISTRO
+            MOVE RETURN-CODE TO WRK-RETURN-CODE
+            IF WRK-RETURN-CODE NOT = 0
+               DISPLAY 'ERRO NA CHAMADA GRAV001A. RETURN-CODE: ' 
+               WRK-RETURN-CODE
+               STOP RUN
+            END-IF
             .
       *----------------------------------------------------------------*
       *> cobol-lint CL002 0003-end
@@ -104,9 +130,14 @@
       *----------------------------------------------------------------*
        0004-REL-USUAR                  SECTION.
       *----------------------------------------------------------------*
-
             IF COPY002A-QUANT-REG NOT EQUAL ZEROS
                CALL 'REL0001A' USING COPY002A-REGISTRO
+               MOVE RETURN-CODE TO WRK-RETURN-CODE
+               IF WRK-RETURN-CODE NOT = 0
+                  DISPLAY 'ERRO NA CHAMADA REL0001A. RETURN-CODE: ' 
+                  WRK-RETURN-CODE
+                  STOP RUN
+               END-IF
             ELSE 
                DISPLAY 'NAO HÁ DADOS INFORMADOS NA TELA'
             END-IF 
@@ -121,8 +152,13 @@
       *----------------------------------------------------------------*
        0005-CLASSIFICAR-REG            SECTION.
       *----------------------------------------------------------------*
-
             CALL 'SORT001A' USING COPY002A-REGISTRO
+            MOVE RETURN-CODE TO WRK-RETURN-CODE
+            IF WRK-RETURN-CODE NOT = 0
+               DISPLAY 'ERRO NA CHAMADA SORT001A. RETURN-CODE: ' 
+               WRK-RETURN-CODE
+               STOP RUN
+            END-IF
             .
       *----------------------------------------------------------------*
       *> cobol-lint CL002 0005-end

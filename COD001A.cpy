@@ -34,4 +34,4 @@
          10 COD001A-MINUTO              PIC 9(002).
          10 COD001A-SEGUNDO             PIC 9(002).
          10 COD001A-MILESIMO            PIC 9(002).
-        05  COD001A-PERIODO             PIC X(020).
+        05  COD001A-PERIODO             PIC X(020).        
