@@ -3,7 +3,7 @@
       * DATA.......: 13/10/2025
       * DESCRICAO..: CONTROLE DE ESTOQUE - VERSAO FINAL
       * OBS........: ESSE PROGRAMA É UM PROGRAMA CLONE DO PROG023A E DO
-      *              PROG023B, PROG023C   X   
+      *              PROG023B, PROG023C      
       * NOME.......: PROG023D
       ******************************************************************
        IDENTIFICATION DIVISION.

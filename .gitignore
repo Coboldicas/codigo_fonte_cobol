@@ -1,0 +1,33 @@
+# =====================================
+# COBOL Dicas - Ignorar arquivos gerados
+# =====================================
+
+# Ignorar arquivos de dados
+*.dat
+
+# Ignorar executáveis sem extensão (objetos compilados COBOL)
+[^.]*
+
+# Ignorar logs e relatórios
+*.lst
+*.log
+
+# Ignorar arquivos de dados
+*.dat
+
+# Ignorar binários de build
+*.o
+*.exe
+*.out
+
+# Ignorar diretório bin/ (se usado para builds)
+bin/
+
+# Ignorar arquivos temporários do sistema e do VS Code
+*.tmp
+.vscode/
+.DS_Store
+Thumbs.db
+*.py
+*.html
+*.txt
