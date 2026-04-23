@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./banner.png" alt="COBOL Dicas Banner">
+  <img src="./banner_github_coboldicas.png" alt="COBOL Dicas Banner">
 </p>
 
 # 🦖 COBOL Dicas
