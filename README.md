@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./banner.png" alt="COBOL Dicas Banner">
+</p>
+
 # 🦖 COBOL Dicas
 
 **Repositório oficial de exemplos e programas do projeto [COBOL Dicas](https://coboldicas.com.br)**  
